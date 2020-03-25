@@ -1,4 +1,4 @@
-const request = require('request')
+    const request = require('request')
 
 
 const geocode = (address , callback) => {
@@ -21,7 +21,7 @@ const geocode = (address , callback) => {
             callback( undefined , {
                 long ,
                 lat ,
-                loc 
+                loc
             })
 
         }

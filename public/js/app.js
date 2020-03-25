@@ -12,6 +12,7 @@ weatherform.addEventListener('submit' , (e) => {
     const url = '/weather?location='+location
 
     messageOne.textContent = 'loading....'
+    messageTwo.textContent = ''
 
     fetch(url).then ((response) => {
         response.json().then((data) => {
@@ -22,5 +23,4 @@ weatherform.addEventListener('submit' , (e) => {
             messageTwo.textContent = data.location
         })
     })
-
 })

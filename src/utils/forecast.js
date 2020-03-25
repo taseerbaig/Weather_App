@@ -14,10 +14,7 @@ const forecast = (lat , long , callback) => {
             callback('Location not found!' , undefined)
         } 
         else{
-            const temperature = 'Temperature currently is ' + body.currently.temperature
-            const currentWeather = 'Current weather is ' + body.currently.summary 
-            const  minutelyWeather = 'It is ' + body.minutely.summary 
-            callback(undefined , currentWeather + '.' + minutelyWeather + '.' + temperature + '\n')
+            callback(undefined , body.currently.temperature + '   ' + body.currently.summary + '  '  + body.hourly.summary)
         }
     })
 
