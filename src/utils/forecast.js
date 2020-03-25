@@ -17,7 +17,7 @@ const forecast = (lat , long , callback) => {
             const temperature = 'Temperature currently is ' + body.currently.temperature
             const currentWeather = 'Current weather is ' + body.currently.summary 
             const  minutelyWeather = 'It is ' + body.minutely.summary 
-            callback(undefined , currentWeather + '.' + minutelyWeather + '.' + temperature)
+            callback(undefined , currentWeather + '.' + minutelyWeather + '.' + temperature + '\n')
         }
     })
 
